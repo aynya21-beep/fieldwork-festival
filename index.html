@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fieldwork Festival, December 5 and 6, 2026, Los Angeles</title>
+<meta name="description" content="Two days of making, sharing and finding your next spark. Workshops, talks and a Maker Market at Foundry Yard, Los Angeles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#183F35; --butter:#F4E8AB; --lilac:#C7AFE8;
+  --ground:#FBF6DE; --ink:#183F35; --ink-2:#3B5C53; --card:#FFFCEE;
+  --hair:rgba(24,63,53,.22); --band:#EEE5F7;
+  --btn:#183F35; --btn-ink:#F4E8AB; --focus:#7B5BB0;
+  --display:"Dela Gothic One","Arial Black",Impact,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E2620; --ink:#F4E8AB; --ink-2:#D6CC97; --card:#163930;
+    --hair:rgba(244,232,171,.22); --band:#12302A;
+    --btn:#F4E8AB; --btn-ink:#183F35; --focus:#C7AFE8;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E2620; --ink:#F4E8AB; --ink-2:#D6CC97; --card:#163930;
+  --hair:rgba(244,232,171,.22); --band:#12302A;
+  --btn:#F4E8AB; --btn-ink:#183F35; --focus:#C7AFE8;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:400}
+p{margin:0}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;cursor:pointer;border:2px solid transparent}
+.btn-solid{background:var(--btn);color:var(--btn-ink)}
+.btn-solid:hover{filter:brightness(1.12)}
+.btn-solid[disabled]{opacity:.45;cursor:not-allowed;filter:none}
+.btn-text{background:none;color:inherit;text-decoration:underline;text-underline-offset:3px;padding:0 8px}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ground);border-bottom:1px solid var(--hair)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.nav-mark{font-family:var(--display);font-size:19px;text-decoration:none;letter-spacing:-.01em;margin-right:auto;white-space:nowrap}
+.nav-links{display:flex;gap:4px}
+.nav-links a{text-decoration:none;font-weight:500;padding:10px 12px;border-radius:999px}
+.nav-links a:hover{background:var(--hair)}
+.count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;margin-left:4px;border-radius:999px;background:var(--lilac);color:#183F35;font-size:13px;font-weight:700}
+.holdpill{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:var(--lilac);color:#183F35;font-weight:600;font-size:14px;text-decoration:none;font-variant-numeric:tabular-nums}
+.holdpill[hidden]{display:none}
+.nav .btn{min-height:44px;padding:0 18px}
+@media (max-width:820px){
+  .nav-links a:not(.keep){display:none}
+  .nav .wrap{gap:10px}
+  .nav-mark{font-size:16px}
+  .nav .btn{padding:0 14px;font-size:15px}
+}
+@media (max-width:420px){.nav-links .keep .lbl{display:none}}
+
+/* Hero */
+.hero{position:relative;background:var(--forest);color:var(--butter);overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding-top:64px;padding-bottom:72px;position:relative;z-index:1}
+.wordmark{font-family:var(--display);font-size:clamp(58px,10.4vw,150px);line-height:.9;letter-spacing:-.02em;color:var(--butter);text-shadow:.045em .04em 0 var(--lilac)}
+.wordmark span{display:block}
+.wordmark span:last-child{margin-left:.5em}
+.theme{font-size:clamp(20px,2.4vw,28px);font-weight:500;margin-top:26px;max-width:30ch;line-height:1.3}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;margin:34px 0 0;max-width:560px}
+.facts div{border-top:2px solid var(--lilac);padding-top:10px}
+.facts dt{font-size:14px;color:#D9CF98}
+.facts dd{margin:2px 0 0;font-weight:600;font-size:17px;line-height:1.35}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn-hero{background:var(--butter);color:#183F35}
+.btn-hero:hover{background:#FFF4BF}
+.btn-ghost{border-color:var(--butter);color:var(--butter)}
+.btn-ghost:hover{background:rgba(244,232,171,.12)}
+.hero :focus-visible{outline-color:var(--lilac)}
+.collage{width:100%;max-width:470px;justify-self:end}
+.collage svg{display:block;width:100%;height:auto;overflow:visible}
+.pc{animation:drop .8s cubic-bezier(.2,.8,.25,1.15) both;transform-box:fill-box;transform-origin:center}
+.pc.d2{animation-delay:.12s}.pc.d3{animation-delay:.24s}.pc.d4{animation-delay:.36s}.pc.d5{animation-delay:.48s}.pc.d6{animation-delay:.6s}
+@keyframes drop{from{opacity:0;transform:translateY(-28px) scale(.94)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pc{animation:none}}
+.torn{display:block;width:100%;height:34px;margin-top:-1px}
+.torn path{fill:var(--forest)}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;padding-top:40px;padding-bottom:48px}
+  .collage{justify-self:center;max-width:330px;order:-1;margin-bottom:-10px}
+}
+@media (max-width:520px){.facts{grid-template-columns:1fr}}
+
+/* Sections */
+section{position:relative}
+.sec-head{max-width:720px;margin-bottom:30px}
+.sec-head h2,.about h2{font-family:var(--display);font-size:clamp(30px,4.2vw,50px);line-height:1.04;letter-spacing:-.01em}
+.sec-head p{margin-top:12px;color:var(--ink-2);font-size:18px;max-width:60ch}
+
+.about{padding-top:72px;padding-bottom:84px}
+.about h2{max-width:18ch}
+.lede{font-size:clamp(19px,2vw,23px);margin-top:20px;max-width:56ch;line-height:1.45}
+.offer{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.offer li{border-top:3px solid var(--ink);padding-top:16px}
+.offer h3{font-weight:700;font-size:21px;margin-top:12px}
+.offer p{color:var(--ink-2);margin-top:6px}
+@media (max-width:820px){.offer{grid-template-columns:1fr}}
+
+.chip{display:inline-block;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:700;color:#183F35;border:1.5px solid #183F35;line-height:1.4}
+.chip.studio{background:var(--lilac)}
+.chip.stage{background:var(--butter)}
+.chip.all,.chip.market{background:#fff}
+
+/* Schedule */
+.schedule{background:var(--band);padding:80px 0 88px}
+.controls{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;margin-bottom:26px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 15px var(--body);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.dayswitch{display:none}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--ink-2);align-items:center}
+.days{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.day{background:var(--ground);border:2px solid var(--ink);border-radius:6px;padding:22px 20px 10px}
+.day-head{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:6px}
+.day-head h3{font-family:var(--display);font-size:32px;line-height:1}
+.day-head .date{font-weight:600;margin-top:6px}
+.day-sum{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.day-sum li{font-size:14px;padding:3px 10px;border:1px solid var(--hair);border-radius:999px;color:var(--ink-2)}
+.slots{list-style:none;margin:0;padding:0}
+.slot{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:16px 0;border-bottom:1px dashed var(--hair)}
+.slot:last-child{border-bottom:0}
+.time{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;padding-top:2px;line-height:1.3}
+.infoline{color:var(--ink-2)}
+.infoline strong{color:var(--ink);display:block}
+.same{font-size:14px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.same svg{flex:none}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.alongside{font-size:14px;color:var(--ink-2);margin-top:8px}
+.card{background:var(--card);border:1.5px solid var(--ink);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:6px;height:100%}
+.card.on{box-shadow:4px 4px 0 var(--lilac)}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.kind{font-size:13px;color:var(--ink-2)}
+.card h4{font-weight:700;font-size:17px;line-height:1.25}
+.who{font-size:15px;color:var(--ink-2)}
+.fcfs{font-size:13px;font-weight:600}
+.pick{margin-top:auto;min-height:44px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 14px var(--body);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 12px}
+.pick:hover{background:var(--hair)}
+.pick[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.card h4+.who{margin-bottom:4px}
+@media (max-width:1020px){.pair{grid-template-columns:1fr}}
+@media (max-width:860px){
+  .days{grid-template-columns:1fr}
+  .dayswitch{display:flex}
+  .days[data-show="sat"] .day[data-day="sun"],.days[data-show="sun"] .day[data-day="sat"]{display:none}
+  .pair{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){.pair{grid-template-columns:1fr}.slot{grid-template-columns:1fr;gap:6px}}
+
+/* Planner */
+.plan{padding-top:84px;padding-bottom:90px}
+.plan-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:start}
+.picks-day+.picks-day{margin-top:26px}
+.picks-day h3{font-family:var(--display);font-size:24px}
+.picks-list{list-style:none;padding:0;margin:12px 0 0;border-top:2px solid var(--ink)}
+.picks-list li{display:grid;grid-template-columns:108px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--hair)}
+.picks-list .t{font-weight:700;font-variant-numeric:tabular-nums}
+.picks-list .ttl{font-weight:600;line-height:1.3}
+.picks-list .ttl span{display:block;font-weight:400;font-size:14px;color:var(--ink-2)}
+.rm{min-height:44px;min-width:44px;padding:0 12px;border-radius:999px;border:1.5px solid var(--hair);background:transparent;color:var(--ink);font:600 14px var(--body);cursor:pointer}
+.rm:hover{border-color:var(--ink)}
+.warn{display:flex;gap:10px;align-items:flex-start;margin-top:12px;padding:12px 14px;border:2px dashed var(--ink);border-radius:6px;font-weight:500}
+.warn svg{flex:none;margin-top:2px}
+.empty{border:2px dashed var(--hair);border-radius:6px;padding:28px;color:var(--ink-2)}
+.empty a{font-weight:600;color:var(--ink)}
+.suggest{background:var(--lilac);color:#183F35;border-radius:6px;padding:26px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px)}
+.suggest :focus-visible{outline-color:#183F35}
+.suggest h3{font-family:var(--display);font-size:26px;line-height:1.1}
+.suggest .price{font-family:var(--display);font-size:54px;line-height:1;margin-top:14px}
+.suggest p{margin-top:10px}
+.suggest .btn{margin-top:18px;background:#183F35;color:#F4E8AB}
+.compare{margin-top:18px;border-top:1.5px solid #183F35;padding-top:14px;font-size:15px}
+.compare div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+@media (max-width:860px){.plan-grid{grid-template-columns:1fr}.suggest{position:static}}
+@media (max-width:480px){.picks-list li{grid-template-columns:1fr auto}.picks-list .t{grid-column:1/-1;font-size:14px}}
+
+/* Tickets */
+.tickets{background:var(--forest);color:var(--butter);padding:56px 0 90px}
+.tickets .sec-head p{color:#D9CF98}
+.tickets :focus-visible{outline-color:var(--lilac)}
+.torn-top{display:block;width:100%;height:34px;transform:rotate(180deg);margin-bottom:-1px}
+.torn-top path{fill:var(--forest)}
+.ticket-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.tix{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.tix li{background:var(--butter);color:#183F35;border-radius:6px;padding:18px 20px;display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center}
+.tix li.best{box-shadow:6px 6px 0 var(--lilac)}
+.tix h3{font-weight:700;font-size:20px}
+.tix .desc{font-size:15px}
+.tix .tag{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;background:var(--lilac);border-radius:999px;padding:2px 10px}
+.tix .amt{font-family:var(--display);font-size:30px}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:2px solid #183F35;background:transparent;color:#183F35;font:700 22px/1 var(--body);cursor:pointer;display:grid;place-items:center}
+.stepper button:hover:not([disabled]){background:rgba(24,63,53,.1)}
+.stepper button[disabled]{opacity:.35;cursor:not-allowed}
+.stepper output{min-width:28px;text-align:center;font-weight:700;font-size:20px;font-variant-numeric:tabular-nums}
+.tix :focus-visible,.checkout :focus-visible{outline-color:#183F35}
+.inc-note{margin-top:16px;font-size:15px;color:#D9CF98}
+.checkout{background:var(--lilac);color:#183F35;border-radius:6px;padding:26px}
+.checkout h3{font-family:var(--display);font-size:26px;line-height:1.1}
+.sumlist{list-style:none;padding:0;margin:14px 0 0;border-top:1.5px solid #183F35}
+.sumlist li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(24,63,53,.3)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px}
+.total strong{font-family:var(--display);font-size:36px;font-weight:400}
+.checkout .btn-solid{background:#183F35;color:#F4E8AB;width:100%;margin-top:18px}
+.small{font-size:14px;margin-top:10px}
+.notice{margin-top:14px;padding:12px 14px;border:2px dashed #183F35;border-radius:6px;font-weight:500}
+.clock{font-family:var(--display);font-size:64px;line-height:1;font-variant-numeric:tabular-nums;margin-top:6px}
+.clock.low{text-shadow:.05em .04em 0 #fff}
+.hold-label{font-weight:600}
+form{margin-top:18px;display:grid;gap:6px}
+label{font-weight:600;font-size:15px;margin-top:8px}
+input{min-height:48px;padding:0 14px;border-radius:6px;border:2px solid #183F35;background:#FFFCEE;color:#183F35;font:16px var(--body)}
+.err{color:#5A1A00;font-weight:700;font-size:15px;min-height:0}
+.err:empty{display:none}
+.done h3{font-size:30px}
+@media (max-width:860px){.ticket-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.tix li{grid-template-columns:1fr auto;gap:10px 14px}.tix .amt{grid-row:1;grid-column:2}.stepper{grid-column:1/-1}}
+
+/* Info */
+.info{padding-top:84px;padding-bottom:90px}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:0;border-top:2px solid var(--ink)}
+.info-grid div{padding:20px 22px 22px 0;border-bottom:1px solid var(--hair)}
+.info-grid dt{font-weight:700;font-size:18px}
+.info-grid dd{margin:6px 0 0;color:var(--ink-2)}
+@media (max-width:820px){.info-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.info-grid{grid-template-columns:1fr}}
+
+footer{background:var(--forest);color:var(--butter);padding:48px 0 56px}
+footer .fm{font-family:var(--display);font-size:clamp(34px,6vw,64px);line-height:1;text-shadow:.045em .04em 0 var(--lilac)}
+footer p{margin-top:16px;color:#D9CF98}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="nav-mark" href="#top">Fieldwork Festival</a>
+    <div class="nav-links">
+      <a href="#schedule">Schedule</a>
+      <a class="keep" href="#plan"><span class="lbl">My day</span><span class="count" id="navCount" aria-label="sessions picked">0</span></a>
+      <a href="#info">Info</a>
+    </div>
+    <a class="holdpill" id="holdPill" href="#tickets" hidden>Held <span id="pillClock">20:00</span></a>
+    <a class="btn btn-solid" href="#tickets">Get tickets</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="wordmark"><span>Fieldwork</span><span>Festival</span></h1>
+      <p class="theme">Make something. Meet someone. Leave inspired.</p>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Sat Dec 5 and Sun Dec 6, 2026</dd></div>
+        <div><dt>Hours</dt><dd>10:00 AM to 5:00 PM Pacific, both days</dd></div>
+        <div><dt>Where</dt><dd>Foundry Yard, Los Angeles</dd></div>
+        <div><dt>Tickets</dt><dd>Weekend $80, single day $45</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn btn-hero" href="#tickets">Get tickets</a>
+        <a class="btn btn-ghost" href="#schedule">See the schedule</a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <svg viewBox="0 0 520 540" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="dotsF" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="2.1" fill="#183F35" opacity=".42"/></pattern>
+          <pattern id="dotsL" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2.6" fill="#C7AFE8"/></pattern>
+        </defs>
+        <g transform="translate(300 175)"><g class="pc">
+          <circle r="120" fill="#C7AFE8"/>
+          <circle r="120" fill="none" stroke="#C7AFE8" stroke-width="40" stroke-dasharray="0 47.12" stroke-linecap="round"/>
+          <circle r="120" fill="url(#dotsF)"/>
+          <circle r="54" fill="#183F35"/>
+        </g></g>
+        <g transform="translate(26 238) rotate(-7)"><g class="pc d2">
+          <polygon fill="#F4E8AB" points="0,12 22,0 48,10 74,2 102,12 130,0 160,9 188,1 216,11 246,2 276,10 300,4 304,40 298,90 306,140 300,196 306,232 280,226 254,236 226,228 198,238 170,229 140,237 112,228 84,236 56,227 28,236 2,228 6,190 0,140 6,92 0,46"/>
+          <rect x="36" y="44" width="230" height="146" fill="url(#dotsF)" opacity=".55"/>
+          <path d="M44 150 C 84 80, 120 210, 160 120 S 230 70, 262 140" fill="none" stroke="#183F35" stroke-width="7" stroke-linecap="round"/>
+        </g></g>
+        <g transform="translate(150 236) rotate(18)"><g class="pc d3">
+          <rect x="-62" y="-17" width="124" height="34" fill="#FBF6DE" opacity=".62"/>
+        </g></g>
+        <g transform="translate(108 92)"><g class="pc d4">
+          <rect x="-15" y="-66" width="30" height="132" rx="15" fill="#F4E8AB"/>
+          <rect x="-15" y="-66" width="30" height="132" rx="15" fill="#F4E8AB" transform="rotate(60)"/>
+          <rect x="-15" y="-66" width="30" height="132" rx="15" fill="#F4E8AB" transform="rotate(120)"/>
+        </g></g>
+        <g transform="translate(396 430)"><g class="pc d5">
+          <path d="M-96 0 A96 96 0 0 1 96 0 Z" fill="url(#dotsL)"/>
+          <path d="M-96 0 A96 96 0 0 1 96 0" fill="none" stroke="#C7AFE8" stroke-width="4"/>
+        </g></g>
+        <g transform="translate(470 300)"><g class="pc d6">
+          <circle r="20" fill="none" stroke="#F4E8AB" stroke-width="3"/>
+          <path d="M-32 0H32M0 -32V32" stroke="#F4E8AB" stroke-width="3"/>
+        </g></g>
+        <g transform="translate(60 470)"><g class="pc d6">
+          <path d="M0 0 q 22 -30 44 0 t 44 0 t 44 0 t 44 0" fill="none" stroke="#C7AFE8" stroke-width="6" stroke-linecap="round"/>
+        </g></g>
+      </svg>
+    </div>
+  </div>
+</header>
+<svg class="torn" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V22L1404 34L1371 20L1333 38L1290 24L1252 36L1209 18L1170 32L1128 22L1090 40L1044 24L1003 34L960 20L921 38L880 26L838 36L796 18L757 30L713 22L676 40L632 24L592 34L548 20L509 36L466 22L425 38L384 24L341 32L300 18L259 34L216 22L176 38L133 26L92 36L51 20L0 32Z"/></svg>
+
+<main>
+<section class="wrap about" id="about" aria-labelledby="about-h">
+  <h2 id="about-h">Two days of making, sharing and finding your next spark.</h2>
+  <p class="lede">Explore hands-on workshops, conversations with creative founders and a marketplace of independent makers. Come curious and leave with new ideas and new connections.</p>
+  <ul class="offer">
+    <li><span class="chip studio">Studio</span><h3>Hands-on workshops</h3><p>90-minute sessions in poster printing, collage, zines and a collaborative mural. Up to 30 people each, first come, first served, and included with every pass.</p></li>
+    <li><span class="chip stage">Main Stage</span><h3>Talks with creative founders</h3><p>Conversations on building a business, finding your visual voice and turning a side project into a studio. Talks run 45 minutes and seat up to 150.</p></li>
+    <li><span class="chip market">Maker Market</span><h3>Independent makers</h3><p>Vendor booths are open 10:00 AM to 5:00 PM and food vendors until 4:00 PM, both days. Food is sold separately. Workshop full? This is the place to wander, browse and meet people.</p></li>
+  </ul>
+</section>
+
+<section class="schedule" id="schedule" aria-labelledby="sched-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="sched-h">Compare the two days</h2>
+      <p>All times Pacific. Studio and Main Stage sessions often run at the same time, so they sit side by side. Add the ones you want to your day.</p>
+    </div>
+    <div class="controls">
+      <div class="seg" id="filters" role="group" aria-label="Show sessions">
+        <button type="button" data-filter="all" aria-pressed="true">Everything</button>
+        <button type="button" data-filter="workshop" aria-pressed="false">Workshops</button>
+        <button type="button" data-filter="talk" aria-pressed="false">Talks</button>
+        <button type="button" data-filter="meetup" aria-pressed="false">Meetups</button>
+      </div>
+      <div class="seg dayswitch" id="dayswitch" role="group" aria-label="Choose a day">
+        <button type="button" data-show="sat" aria-pressed="true">Saturday</button>
+        <button type="button" data-show="sun" aria-pressed="false">Sunday</button>
+      </div>
+      <div class="legend"><span><span class="chip studio">Studio</span> workshops</span><span><span class="chip stage">Main Stage</span> talks</span></div>
+    </div>
+    <div class="days" id="days" data-show="sat"></div>
+  </div>
+</section>
+
+<section class="wrap plan" id="plan" aria-labelledby="plan-h">
+  <div class="sec-head">
+    <h2 id="plan-h">Build my day</h2>
+    <p>Your picks land here. We’ll flag anything that overlaps and suggest the ticket that covers it.</p>
+  </div>
+  <div class="plan-grid">
+    <div id="picks"></div>
+    <aside class="suggest" id="suggest" aria-live="polite"></aside>
+  </div>
+</section>
+
+<svg class="torn-top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V22L1404 34L1371 20L1333 38L1290 24L1252 36L1209 18L1170 32L1128 22L1090 40L1044 24L1003 34L960 20L921 38L880 26L838 36L796 18L757 30L713 22L676 40L632 24L592 34L548 20L509 36L466 22L425 38L384 24L341 32L300 18L259 34L216 22L176 38L133 26L92 36L51 20L0 32Z"/></svg>
+<section class="tickets" id="tickets" aria-labelledby="tix-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="tix-h" tabindex="-1">Choose your ticket</h2>
+      <p>Every pass includes workshops and talks. Pick your passes, then we’ll hold them for 20 minutes while you check out.</p>
+    </div>
+    <div class="ticket-grid">
+      <div>
+        <ul class="tix" id="tix"></ul>
+        <p class="inc-note">Food is sold separately. Workshops hold 30 people each and are first come, first served, so arrive early for the ones you want.</p>
+      </div>
+      <div class="checkout" id="checkout"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap info" id="info" aria-labelledby="info-h">
+  <div class="sec-head"><h2 id="info-h">Good to know</h2></div>
+  <dl class="info-grid">
+    <div><dt>When</dt><dd>Saturday, December 5 and Sunday, December 6, 2026. 10:00 AM to 5:00 PM each day.</dd></div>
+    <div><dt>Where</dt><dd>Foundry Yard, Los Angeles.</dd></div>
+    <div><dt>Talks</dt><dd>Main Stage talks run 45 minutes and seat up to 150 people. All times are Pacific.</dd></div>
+    <div><dt>What’s included</dt><dd>Workshops and talks are included with every pass. Weekend pass $80, single-day pass $45.</dd></div>
+    <div><dt>Food</dt><dd>Lunch is at 12:00 PM both days. Food vendors are open from 10:00 AM until 4:00 PM, and food is sold separately.</dd></div>
+    <div><dt>Workshops</dt><dd>Each workshop runs 90 minutes, with a break before the next session, and holds 30 people, first come, first served. If one is full, browse the vendor booths and Maker Market or join a conversation.</dd></div>
+  </dl>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fm">Fieldwork Festival</p>
+    <p>Make something. Meet someone. Leave inspired. December 5 and 6, 2026, Foundry Yard, Los Angeles.</p>
+  </div>
+</footer>
+<p class="sr" id="live" aria-live="polite"></p>
+
+<script>
+(function(){
+const DAYS={sat:{name:'Saturday',date:'December 5'},sun:{name:'Sunday',date:'December 6'}};
+const VENUE={studio:'Studio',stage:'Main Stage',all:'Whole festival'};
+const KIND={workshop:'Workshop',talk:'Talk',meetup:'Meetup'};
+const S=[
+ {id:'sat-doors',day:'sat',sort:600,time:'10:00 AM',kind:'info',title:'Doors, Maker Market and food vendors open',note:'Food is served until 4:00 PM. The Maker Market runs until 5:00 PM.'},
+ {id:'sat-1030',day:'sat',sort:630,end:675,range:'10:30 to 11:15 AM',time:'10:30 AM',kind:'talk',venue:'stage',title:'Creativity beyond the screen',who:'Riley Morgan, artist and educator'},
+ {id:'sat-1130a',day:'sat',sort:690,end:780,range:'11:30 AM to 1:00 PM',time:'11:30 AM',kind:'workshop',venue:'studio',title:'Print your first poster',who:'Avery Lee'},
+ {id:'sat-1130b',day:'sat',sort:690,end:735,range:'11:30 AM to 12:15 PM',time:'11:30 AM',kind:'talk',venue:'stage',title:'Building an independent creative business',who:'Casey Patel'},
+ {id:'sat-lunch',day:'sat',sort:720,time:'12:00 PM',kind:'info',title:'Lunch',note:'Food vendors are open until 4:00 PM. Food is sold separately.'},
+ {id:'sat-130a',day:'sat',sort:810,end:900,range:'1:30 to 3:00 PM',time:'1:30 PM',kind:'workshop',venue:'studio',title:'Collaborative collage',who:'Avery Lee'},
+ {id:'sat-130b',day:'sat',sort:810,end:855,range:'1:30 to 2:15 PM',time:'1:30 PM',kind:'talk',venue:'stage',title:'Finding your visual voice',who:'Riley Morgan'},
+ {id:'sat-3',day:'sat',sort:900,end:1020,time:'3:00 to 5:00 PM',kind:'meetup',venue:'all',title:'Open studios and community meetup',who:'Everyone'},
+ {id:'sun-doors',day:'sun',sort:600,time:'10:00 AM',kind:'info',title:'Doors, Maker Market and food vendors open',note:'Food is served until 4:00 PM. The Maker Market runs until 5:00 PM.'},
+ {id:'sun-1030a',day:'sun',sort:630,end:720,range:'10:30 AM to 12:00 PM',time:'10:30 AM',kind:'workshop',venue:'studio',title:'Make a mini zine',who:'Taylor Brooks'},
+ {id:'sun-1030b',day:'sun',sort:630,end:675,range:'10:30 to 11:15 AM',time:'10:30 AM',kind:'talk',venue:'stage',title:'Creative partnerships that work',who:'Casey Patel'},
+ {id:'sun-lunch',day:'sun',sort:720,time:'12:00 PM',kind:'info',title:'Lunch',note:'Food vendors are open until 4:00 PM. Food is sold separately.'},
+ {id:'sun-1a',day:'sun',sort:780,end:870,range:'1:00 to 2:30 PM',time:'1:00 PM',kind:'workshop',venue:'studio',title:'Build a collaborative mural',who:'Riley Morgan'},
+ {id:'sun-1b',day:'sun',sort:780,end:825,range:'1:00 to 1:45 PM',time:'1:00 PM',kind:'talk',venue:'stage',title:'From side project to studio',who:'Taylor Brooks'},
+ {id:'sun-3',day:'sun',sort:900,time:'3:00 PM',kind:'meetup',venue:'all',title:'Closing conversation: What will you make next?',who:'All attendees'},
+ {id:'sun-4',day:'sun',sort:960,end:1020,time:'4:00 to 5:00 PM',kind:'meetup',venue:'all',title:'Final market hour and farewell meetup',who:'Everyone'}
+];
+const byId=Object.fromEntries(S.map(s=>[s.id,s]));
+const TIX=[
+ {id:'weekend',name:'Weekend pass',price:80,desc:'Saturday and Sunday'},
+ {id:'sat',name:'Saturday pass',price:45,desc:'Single day, December 5'},
+ {id:'sun',name:'Sunday pass',price:45,desc:'Single day, December 6'}
+];
+const HOLD_MS=20*60*1000, KEY='fieldwork-festival-v1';
+const ICON_SAME='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+const ICON_CHECK='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
+const ICON_WARN='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>';
+
+function fresh(){return {picks:[],qty:{weekend:0,sat:0,sun:0},holdEnd:null,done:null};}
+let st=fresh();
+try{const raw=JSON.parse(localStorage.getItem(KEY));if(raw&&raw.qty){st=Object.assign(fresh(),raw);st.picks=st.picks.filter(id=>byId[id]);}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+const ui={filter:'all',show:'sat',expired:false,warned:{}};
+if(st.holdEnd&&st.holdEnd<=Date.now()){st.holdEnd=null;ui.expired=true;save();}
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=n=>'$'+n;
+const plural=(n,w)=>n+' '+w+(n===1?'':'s');
+
+function card(s){
+  const on=st.picks.includes(s.id);
+  return `<article class="card${on?' on':''}">
+    <div class="card-tags"><span class="chip ${s.venue}">${VENUE[s.venue]}</span><span class="kind">${KIND[s.kind]}</span></div>
+    <h4>${s.title}</h4><p class="who">${s.who}</p>
+    ${s.range?`<p class="who">${s.range}, ${s.kind==='talk'?45:90} minutes</p>`:''}
+    ${s.kind==='workshop'?'<p class="fcfs">30 spots, first come, first served</p>':''}
+    ${s.kind==='talk'?'<p class="fcfs">Seats up to 150</p>':''}
+    <button type="button" class="pick" data-pick="${s.id}" aria-pressed="${on}" aria-label="${on?'Remove':'Add'} ${esc(s.title)} ${on?'from':'to'} my day">${on?ICON_CHECK+'In my day':'Add to my day'}</button>
+  </article>`;
+}
+function dayCol(d){
+  const items=S.filter(s=>s.day===d);
+  const c=k=>items.filter(s=>s.kind===k).length;
+  const sorts=[...new Set(items.map(s=>s.sort))];
+  const rows=sorts.map(t=>{
+    const g=items.filter(s=>s.sort===t);
+    if(g[0].kind==='info'){
+      if(ui.filter!=='all')return '';
+      return `<li class="slot"><p class="time">${g[0].time}</p><div class="infoline"><strong>${g[0].title}</strong>${g[0].note}</div></li>`;
+    }
+    const vis=g.filter(s=>ui.filter==='all'||s.kind===ui.filter);
+    if(!vis.length)return '';
+    const pair=vis.length>1;
+    const hidden=g.filter(s=>!vis.includes(s));
+    return `<li class="slot"><p class="time">${g[0].time}</p><div>
+      ${pair?`<p class="same">${ICON_SAME}Same time, choose one</p>`:''}
+      <div class="${pair?'pair':''}">${vis.map(card).join('')}</div>
+      ${hidden.length?`<p class="alongside">Runs at the same time as ${hidden.map(h=>VENUE[h.venue]+': '+h.title).join(', ')}.</p>`:''}
+    </div></li>`;
+  }).join('');
+  return `<section class="day" data-day="${d}" aria-labelledby="h-${d}">
+    <header class="day-head"><h3 id="h-${d}">${DAYS[d].name}</h3><p class="date">${DAYS[d].date}</p>
+    <ul class="day-sum"><li>${plural(c('talk'),'talk')}</li><li>${plural(c('workshop'),'workshop')}</li><li>${plural(c('meetup'),'meetup')}</li><li>Lunch at 12:00 PM</li><li>Food until 4:00 PM</li></ul></header>
+    <ol class="slots">${rows||'<li class="slot"><p class="infoline">Nothing in this category today.</p></li>'}</ol>
+  </section>`;
+}
+function renderSchedule(){
+  const el=$('days');el.dataset.show=ui.show;
+  el.innerHTML=dayCol('sat')+dayCol('sun');
+  document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.filter===ui.filter));
+  document.querySelectorAll('[data-show]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.show===ui.show));
+}
+function pickedDays(){return ['sat','sun'].filter(d=>st.picks.some(id=>byId[id].day===d));}
+function renderPlanner(){
+  $('navCount').textContent=st.picks.length;
+  const days=pickedDays();
+  if(!days.length){
+    $('picks').innerHTML=`<div class="empty">Nothing picked yet. <a href="#schedule">Browse the schedule</a> and choose Add to my day on the sessions you want.</div>`;
+  }else{
+    $('picks').innerHTML=days.map(d=>{
+      const mine=st.picks.map(id=>byId[id]).filter(s=>s.day===d).sort((a,b)=>a.sort-b.sort);
+      const endOf=s=>s.end||(s.kind==='talk'?s.sort+60:s.sort+1), clashes=[];
+      mine.forEach((a,i)=>mine.slice(i+1).forEach(b=>{if(a.sort<endOf(b)&&b.sort<endOf(a))clashes.push([a,b]);}));
+      return `<div class="picks-day"><h3>${DAYS[d].name}, ${DAYS[d].date}</h3>
+        ${clashes.map(([a,b])=>`<p class="warn">${ICON_WARN}<span>${a.sort===b.sort?`${a.title} and ${b.title} both start at ${a.time}.`:`${a.title} runs ${a.range||(a.kind==='talk'?'up to an hour from '+a.time:a.time)}, which overlaps ${b.title} at ${b.time}.`} Keep the one you want most.</span></p>`).join('')}
+        <ol class="picks-list">${mine.map(s=>`<li><span class="t">${s.range||s.time}</span><span class="ttl">${s.title}<span>${VENUE[s.venue]}, ${s.who}</span></span><button type="button" class="rm" data-pick="${s.id}" aria-label="Remove ${esc(s.title)}">Remove</button></li>`).join('')}</ol></div>`;
+    }).join('');
+  }
+  const cmp=`<div class="compare"><div><span>Weekend pass, both days</span><strong>$80</strong></div><div><span>Single-day pass</span><strong>$45</strong></div><div><span>Two single days</span><strong>$90</strong></div></div>`;
+  let html;
+  if(!days.length){
+    html=`<h3>Your ticket</h3><p>Pick a few sessions and we’ll suggest the pass that covers them.</p>${cmp}`;
+  }else if(days.length===2){
+    html=`<h3>Weekend pass fits your plan</h3><p class="price">$80</p><p>Your picks span both days. A weekend pass covers everything and costs $10 less than two single days.</p><button type="button" class="btn" data-suggest="weekend">Add weekend pass</button>${cmp}`;
+  }else{
+    const d=days[0];
+    html=`<h3>${DAYS[d].name} pass fits your plan</h3><p class="price">$45</p><p>Everything you picked is on ${DAYS[d].name}. If you might come back for the other day, the weekend pass is $80.</p><button type="button" class="btn" data-suggest="${d}">Add ${DAYS[d].name} pass</button>${cmp}`;
+  }
+  $('suggest').innerHTML=html;
+}
+const total=q=>TIX.reduce((n,t)=>n+t.price*(q[t.id]||0),0);
+const count=q=>TIX.reduce((n,t)=>n+(q[t.id]||0),0);
+function suggestedId(){const d=pickedDays();return d.length===2?'weekend':d.length===1?d[0]:null;}
+function renderTix(){
+  const held=!!st.holdEnd, best=suggestedId();
+  $('tix').innerHTML=TIX.map(t=>{
+    const q=st.qty[t.id];
+    return `<li class="${best===t.id?'best':''}"><div><h3>${t.name}</h3><p class="desc">${t.desc}</p>${best===t.id?'<span class="tag">Fits your plan</span>':''}</div>
+      <span class="amt">${money(t.price)}</span>
+      <div class="stepper"><button type="button" data-dec="${t.id}" aria-label="Remove one ${t.name}" ${held||q===0||st.done?'disabled':''}>&minus;</button>
+      <output aria-live="polite" aria-label="${t.name} quantity">${q}</output>
+      <button type="button" data-inc="${t.id}" aria-label="Add one ${t.name}" ${held||q>=10||st.done?'disabled':''}>+</button></div></li>`;
+  }).join('');
+}
+function lines(q){return TIX.filter(t=>q[t.id]).map(t=>`<li><span>${q[t.id]} &times; ${t.name}</span><span>${money(t.price*q[t.id])}</span></li>`).join('');}
+function fmt(ms){const s=Math.max(0,Math.ceil(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+function renderCheckout(){
+  const el=$('checkout'), q=st.qty;
+  if(st.done){
+    el.innerHTML=`<div class="done"><h3>You’re going to Fieldwork</h3><p class="small">Thanks, ${esc(st.done.name)}. Here’s your order.</p>
+      <ul class="sumlist">${lines(st.done.qty)}</ul><p class="total"><span>Total</span><strong>${money(st.done.total)}</strong></p>
+      <p class="notice">Checkout is a placeholder in this preview. No payment was taken.</p>
+      <button type="button" class="btn btn-solid" id="restart">Start a new order</button></div>`;
+  }else if(st.holdEnd){
+    el.innerHTML=`<p class="hold-label">Your tickets are held for</p>
+      <p class="clock" id="holdClock" role="timer">${fmt(st.holdEnd-Date.now())}</p>
+      <p class="small">Finish checkout before the timer ends, or the tickets go back on sale.</p>
+      <ul class="sumlist">${lines(q)}</ul><p class="total"><span>Total</span><strong>${money(total(q))}</strong></p>
+      <form id="payForm" novalidate>
+        <label for="fn">Full name</label><input id="fn" name="name" autocomplete="name" required>
+        <label for="em">Email for your tickets</label><input id="em" name="email" type="email" autocomplete="email" required>
+        <p class="err" id="formErr" role="alert"></p>
+        <p class="small">Payment is a placeholder in this preview. No card is charged.</p>
+        <button type="submit" class="btn btn-solid">Complete purchase</button>
+        <button type="button" class="btn btn-text" id="release">Release tickets</button>
+      </form>`;
+  }else{
+    const n=count(q);
+    el.innerHTML=`<h3>Your order</h3>
+      ${n?`<ul class="sumlist">${lines(q)}</ul>`:'<p class="small">No passes selected yet. Use the plus buttons to add them.</p>'}
+      <p class="total"><span>Total${n?' for '+plural(n,'pass').replace('passs','passes'):''}</span><strong>${money(total(q))}</strong></p>
+      ${ui.expired?'<p class="notice" role="status">Your 20-minute hold ended and the tickets went back on sale. Reserve again to start a new hold.</p>':''}
+      <button type="button" class="btn btn-solid" id="reserve" ${n?'':'disabled'}>Reserve for 20 minutes</button>
+      <p class="small">We hold your passes for 20 minutes while you check out.</p>`;
+  }
+  updatePill();
+}
+function updatePill(){
+  const p=$('holdPill');
+  if(st.holdEnd){p.hidden=false;$('pillClock').textContent=fmt(st.holdEnd-Date.now());}else p.hidden=true;
+}
+function all(){renderSchedule();renderPlanner();renderTix();renderCheckout();}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.pick){
+    const id=b.dataset.pick, inPlan=b.classList.contains('rm');
+    st.picks=st.picks.includes(id)?st.picks.filter(x=>x!==id):[...st.picks,id];
+    save();renderSchedule();renderPlanner();renderTix();
+    $('live').textContent=(st.picks.includes(id)?'Added ':'Removed ')+byId[id].title;
+    const f=inPlan?document.querySelector('#picks .rm')||$('plan-h'):document.querySelector(`#days [data-pick="${id}"]`);
+    if(f){if(f.tagName==='H2')f.setAttribute('tabindex','-1');f.focus({preventScroll:true});}
+  }else if(b.dataset.filter){ui.filter=b.dataset.filter;renderSchedule();}
+  else if(b.dataset.show){ui.show=b.dataset.show;renderSchedule();}
+  else if(b.dataset.inc){st.qty[b.dataset.inc]=Math.min(10,st.qty[b.dataset.inc]+1);ui.expired=false;save();renderTix();renderCheckout();document.querySelector(`[data-inc="${b.dataset.inc}"]`).focus();}
+  else if(b.dataset.dec){st.qty[b.dataset.dec]=Math.max(0,st.qty[b.dataset.dec]-1);save();renderTix();renderCheckout();const n=document.querySelector(`[data-dec="${b.dataset.dec}"]`);(n.disabled?document.querySelector(`[data-inc="${b.dataset.dec}"]`):n).focus();}
+  else if(b.dataset.suggest){
+    if(st.holdEnd||st.done)return location.hash='tickets';
+    const id=b.dataset.suggest;if(!st.qty[id])st.qty[id]=1;ui.expired=false;save();renderTix();renderCheckout();
+    $('tix-h').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});$('tix-h').focus({preventScroll:true});
+  }
+  else if(b.id==='reserve'){if(!count(st.qty))return;st.holdEnd=Date.now()+HOLD_MS;ui.expired=false;ui.warned={};save();renderTix();renderCheckout();$('fn').focus();}
+  else if(b.id==='release'){st.holdEnd=null;save();renderTix();renderCheckout();$('live').textContent='Tickets released.';$('reserve')&&$('reserve').focus();}
+  else if(b.id==='restart'){st.done=null;st.qty={weekend:0,sat:0,sun:0};save();renderTix();renderCheckout();}
+});
+document.addEventListener('submit',e=>{
+  if(e.target.id!=='payForm')return;e.preventDefault();
+  const name=$('fn').value.trim(), email=$('em').value.trim(), err=$('formErr');
+  if(!name){err.textContent='Enter your full name.';$('fn').focus();return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Enter an email address like name@example.com.';$('em').focus();return;}
+  st.done={name,qty:Object.assign({},st.qty),total:total(st.qty)};st.holdEnd=null;save();renderTix();renderCheckout();
+  $('checkout').querySelector('h3').setAttribute('tabindex','-1');$('checkout').querySelector('h3').focus();
+});
+setInterval(()=>{
+  if(!st.holdEnd)return;
+  const left=st.holdEnd-Date.now();
+  if(left<=0){st.holdEnd=null;ui.expired=true;save();renderTix();renderCheckout();$('live').textContent='Your hold ended and the tickets went back on sale.';return;}
+  const c=$('holdClock');if(c){c.textContent=fmt(left);c.classList.toggle('low',left<60000);}
+  updatePill();
+  [5,1].forEach(m=>{if(left<=m*60000&&!ui.warned[m]){ui.warned[m]=true;$('live').textContent=plural(m,'minute')+' left on your ticket hold.';}});
+},1000);
+all();
+})();
+</script>
+</body>
+</html>
