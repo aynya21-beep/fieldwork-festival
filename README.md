@@ -31,6 +31,5 @@ The brief didn't include session lengths, capacities or food hours, so I set the
 - Session lengths build in breaks so attendees can get to their next session.
 - Lunch is at 12:00 PM both days (Saturday moved from 12:30 for consistency), and food vendors are open until 4:00 PM so attendees can eat on their own schedule around the closing sessions.
 
-## Builder feedback
 
 
